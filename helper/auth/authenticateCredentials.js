@@ -12,7 +12,12 @@ export async function authenticateLogin(credentials) {
 	}
 	try {
 		if (await bcrypt.compare(password, userData.password)) {
-			return { name: userData.name, email: userData.email, id: userData._id };
+			return {
+				firstname: userData.firstname,
+				lastname: userData.lastname,
+				email: userData.email,
+				id: userData._id,
+			};
 		} else {
 			console.log('invalid password');
 			return null;
