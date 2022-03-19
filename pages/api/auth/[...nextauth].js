@@ -5,7 +5,6 @@ import redirect from '@/helper/auth/callbacks/redirect';
 export default NextAuth({
 	providers: [CredentialsProvider],
 	pages: {
-		signIn: '/auth/signin',
 		error: '/auth/signin',
 		newUser: '/welcome',
 	},
