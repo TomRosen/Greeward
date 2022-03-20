@@ -19,11 +19,6 @@ export default function Navbar() {
   };
   const navigation = [
     {
-      name: "Dashboard",
-      href: "/",
-      current: getCurrent("/"),
-    },
-    {
       name: "Engagements",
       href: "/engagements",
       current: getCurrent("/engagements"),

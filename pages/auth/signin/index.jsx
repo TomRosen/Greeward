@@ -11,7 +11,7 @@ export default function SignIn({ csrfToken }) {
 	function signinFormCallback() {}
 
 	function autoRedirect() {
-		setTimeout(() => router.push('/dashboard'), 5000);
+		setTimeout(() => router.push('/'), 5000);
 	}
 
 	if (status === 'loading') {
@@ -25,7 +25,7 @@ export default function SignIn({ csrfToken }) {
 						<h1>You are already logged in!</h1>
 						<p>
 							You will be automatically redirected in 5 seconds or
-							<Link href='/dashboard' passHref>
+							<Link href='/' passHref>
 								Click here
 							</Link>
 							!
