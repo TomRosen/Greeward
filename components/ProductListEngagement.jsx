@@ -11,7 +11,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Vegan Mensa",
+    name: "Conscious Mensa Meals",
     href: "#",
     price: "Get up to 20 🥕",
     imageSrc:
@@ -21,7 +21,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Reuse Office Equipment",
+    name: "Buy refurbished Equipment",
     href: "#",
     price: "Get up to 200 🥕",
     imageSrc:
@@ -31,7 +31,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Reuse Non-Office Products",
+    name: "Repair, reduce and recycle",
     href: "#",
     price: "Get up to 100 🥕",
     imageSrc:

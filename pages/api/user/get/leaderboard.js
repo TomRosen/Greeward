@@ -1,4 +1,4 @@
-import Engagement from '@/models/Engagement';
+import User from '@/models/User';
 import { dbConnect } from '@/helper/database/dbConnect';
 
 export default async function handler(req, res) {
@@ -8,7 +8,8 @@ export default async function handler(req, res) {
 		let { limit, skip } = req.body;
 		limit = limit ? limit : 100;
 		skip = skip ? skip : 0;
-		let results = await Engagement.find({}, null, {
+		let results = await User.find({}, null, {
+			sort: { date: 1 },
 			limit: limit,
 			skip: skip,
 		}).catch((err) => {
@@ -21,4 +22,9 @@ export default async function handler(req, res) {
 		console.log('Invalid request type!❌');
 		res.status(400).send('Invalid request type!❌');
 	}
+}
+
+function convertToArray(a) {
+	a.constructor.name !== 'Array' ? (a = [a]) : (a = a);
+	return a;
 }

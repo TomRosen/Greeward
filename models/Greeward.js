@@ -7,16 +7,18 @@ const GreewardSchema = new mongoose.Schema(
 		title: {
 			type: String,
 			required: [true, 'title is required'],
-			unique: [true, 'title has to be unique'],
 		},
 		description: {
 			type: String,
 			required: [true, 'description is required'],
-			unique: [true, 'description has to be unique'],
 		},
 		carrots: {
 			type: Number,
 			default: 0,
+		},
+		image: {
+			type: String,
+			default: '',
 		},
 	},
 	{ timestamps: false }

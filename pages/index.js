@@ -1,15 +1,19 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Leaderboard from "@/components/Leaderboard";
-import ProductHighlightList from "@/components/ProductHighlightList";
-import { useQueryClient } from 'react-query';
+import Leaderboard from '@/components/Leaderboard';
+import ProductHighlightList from '@/components/ProductHighlightList';
+import { useQuery, useQueryClient } from 'react-query';
+import { getGreewardsAll, getGreewardsQuery } from '@/helper/data/greewards';
 
 export default function Home() {
-  return (
-    <div>
-      <ProductHighlightList></ProductHighlightList>
-      <Leaderboard></Leaderboard>
-    </div>
-  );
+	const queryClient = useQueryClient();
+	const { data, error, status } = useQuery('greewards', () =>
+		getGreewardsAll(4, 0)
+	);
+
+	return (
+		<div>
+			<ProductHighlightList></ProductHighlightList>
+			<Leaderboard></Leaderboard>
+		</div>
+	);
+
 }
