@@ -24,7 +24,19 @@ const Home = ({}) => {
             <div class="px-4 py-5 bg-white sm:p-6">
               <div class="grid grid-cols-6 gap-6">
   
-  
+                
+
+              <div class="col-span-6 sm:col-span-6">
+                <label for="country" class="block text-sm font-medium text-gray-700">How did you engage?</label>
+                <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option>Select</option>
+                  <option>Travel by train</option>
+                  <option>Choose a vegan meal</option>
+                  <option>Bought refurbished laptop</option>
+                  <option>Got pants sewn</option>
+                </select>
+              </div>
+              
                 <div class="col-span-6 sm:col-span-6">
                 <label class="block text-sm font-medium text-gray-700"> Upload Approval </label>
                 <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
