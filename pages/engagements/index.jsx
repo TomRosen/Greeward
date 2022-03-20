@@ -1,11 +1,11 @@
 import Search from "@/components/Search";
-import ProductList from "@/components/ProductList";
+import ProductListEngagement from "@/components/ProductListEngagement";
 
 const Home = ({}) => {
   return (
     <div>
       <Search></Search>
-      <ProductList></ProductList>
+      <ProductListEngagement></ProductListEngagement>
     </div>
   );
 };
