@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Travel Green",
-    href: "#",
+    href: "engagements/verify",
     price: "Get up to 1000 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     name: "Conscious Mensa Meals",
-    href: "#",
+    href: "engagements/verify",
     price: "Get up to 20 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1560341208-305f47d5e901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -22,7 +22,7 @@ const products = [
   {
     id: 3,
     name: "Buy refurbished Equipment",
-    href: "#",
+    href: "engagements/verify",
     price: "Get up to 200 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1444201716572-c60ec66d0494?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -32,7 +32,7 @@ const products = [
   {
     id: 4,
     name: "Repair, reduce and recycle",
-    href: "#",
+    href: "engagements/verify",
     price: "Get up to 100 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
