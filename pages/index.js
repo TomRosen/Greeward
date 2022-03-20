@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
@@ -62,6 +63,23 @@ export default function Home() {
 					</span>
 				</a>
 			</footer>
+=======
+import Leaderboard from '@/components/Leaderboard';
+import ProductHighlightList from '@/components/ProductHighlightList';
+import { useQuery, useQueryClient } from 'react-query';
+import { getGreewardsAll, getGreewardsQuery } from '@/helper/data/greewards';
+
+export default function Home() {
+	const queryClient = useQueryClient();
+	const { data, error, status } = useQuery('greewards', () =>
+		getGreewardsAll(4, 0)
+	);
+
+	return (
+		<div>
+			<ProductHighlightList></ProductHighlightList>
+			<Leaderboard></Leaderboard>
+>>>>>>> Stashed changes
 		</div>
 	);
 }

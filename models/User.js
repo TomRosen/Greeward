@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema(
 			type: String,
 			required: [true, 'Password is required'],
 		},
+		carrots: {
+			type: Number,
+			default: 0,
+		},
 		department: {
 			type: String,
 		},

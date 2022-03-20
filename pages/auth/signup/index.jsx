@@ -18,10 +18,6 @@ export default function SignUp() {
 		);
 	}
 
-	function autoRedirect() {
-		setTimeout(() => router.push('/dashboard'), 5000);
-	}
-
 	if (status === 'loading') {
 		return <div className='loader container'></div>;
 	}
@@ -33,13 +29,11 @@ export default function SignUp() {
 						<h1>You are already logged in!</h1>
 						<p>
 							You will be automatically redirected in 5 seconds or
-							<Link href='/dashboard' passHref>
-								{' '}
+							<Link href='/' passHref>
 								Click here
 							</Link>
 							!
 						</p>
-						{autoRedirect()}
 					</div>
 				</div>
 			) : (
@@ -52,6 +46,15 @@ export default function SignUp() {
 					</a>
 				</div>
 			)}
+
+			<div className='container'>
+				<SignUpForm callback={() => signupFormCallback()} />
+				<a
+					href='/api/auth/signin'
+					className='alert-link btn btn-primary btn-sm'>
+					Login
+				</a>
+			</div>
 		</>
 	);
 }
