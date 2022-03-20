@@ -5,10 +5,9 @@ export default async function handler(req, res) {
 	if (req.method === 'POST') {
 		await dbConnect();
 
-		const { limit, skip } = req.body;
-		limit ? limit : (limit = 100);
-		skip ? skip : (skip = 0);
-		let datesArr = convertToArray(dates);
+		let { limit, skip } = req.body;
+		limit = limit ? limit : 100;
+		skip = skip ? skip : 0;
 		let results = await Greeward.find({}, null, {
 			limit: limit,
 			skip: skip,
