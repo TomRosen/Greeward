@@ -10,13 +10,17 @@ const getEngagementsAll = async (limit = -1, skip = 0) => {
 };
 
 const getEngagementsQuery = async (filter = {}) => {
-	let data = await fetch('/api/engagements/get/query', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({ filter }),
-	}).then((res) => res.json());
+	console.log('getGreewardsQuery', filter);
+	const data = await (
+		await fetch('/api/engagements/get/query', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ filter }),
+		})
+	).json();
+	console.log('getGreewardsQuery', data);
 	return data;
 };
 

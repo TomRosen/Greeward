@@ -20,7 +20,11 @@ export default function Home() {
 	return (
 		<div>
 			<ProductHighlightList></ProductHighlightList>
-			<Leaderboard></Leaderboard>
+			{statusLeaderboard === 'loading' ? (
+				<div>Loading...</div>
+			) : (
+				<Leaderboard people={dataLeaderboard}></Leaderboard>
+			)}
 		</div>
 	);
 }
