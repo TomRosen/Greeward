@@ -14,7 +14,9 @@ const detailPage = () => {
   );
 
   return status !== "loading" ? (
-    <ProductDetail product={data}></ProductDetail>
+    <ProductDetail
+      product={data.filter((reward) => reward._id === greewardID)}
+    ></ProductDetail>
   ) : (
     <p>Loading</p>
   );

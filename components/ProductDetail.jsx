@@ -21,11 +21,14 @@ const ProductDetail = (data) => {
             <p className="leading-relaxed">{product.description}</p>
             <div className="flex mt-6 mb-5">
               <span className="title-font font-medium text-2xl text-gray-900">
-                {product.carrots}
+                {product.carrots}🥕
               </span>
               <button
                 className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-                onClick={() => redeem(product._id, session.user.email)}
+                onClick={async () => {
+                  let data = await redeem(product._id, session.user.email);
+                  session.user.carrots = data.carrots;
+                }}
               >
                 Redeem
               </button>
