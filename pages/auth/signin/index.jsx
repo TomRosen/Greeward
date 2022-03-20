@@ -51,7 +51,7 @@ export async function getServerSideProps(context) {
 	const csrfToken = await getCsrfToken();
 	return {
 		props: {
-			csrfToken
+			csrfToken,
 		},
 	};
 }

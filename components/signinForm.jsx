@@ -28,7 +28,15 @@ class SignInForm extends React.Component {
 				<a className='text-danger'>
 					{this.props.error && <SignInError error={this.props.error} />}
 				</a>
-				<form className='mb-4 mt-4' method='post'>
+				<form
+					className='mb-4 mt-4'
+					method='post'
+					action='/api/auth/callback/credentials'>
+					<input
+						name='csrfToken'
+						type='hidden'
+						defaultValue={this.props.csrfToken}
+					/>
 					<div className='form-group'>
 						<label htmlFor='Email'>Email</label>
 						<input
@@ -52,12 +60,13 @@ class SignInForm extends React.Component {
 					<button
 						className='btn btn-primary mt-3 form-control'
 						type='submit'
-						onClick={() =>
+						/* onClick={() =>
 							signIn('credentials', {
 								email: this.state.email,
 								password: this.state.password,
 							})
-						}>
+						} */
+					>
 						Signin
 					</button>
 				</form>
