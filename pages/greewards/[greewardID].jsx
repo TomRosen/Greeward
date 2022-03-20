@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import ProductDetail from "@/components/ProductDetail";
 import { useQueryClient, useQuery } from "react-query";
 import { getGreewardsQuery } from "@/helper/data/greewards";
-import { useEffect } from "react/cjs/react.production.min";
+import { getUsersQuery } from "@/helper/data/users";
 
 const detailPage = () => {
   const router = useRouter();
