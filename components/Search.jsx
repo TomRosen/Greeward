@@ -24,7 +24,7 @@ export default function Example(props) {
 						type='text'
 						name='search'
 						id='search'
-						className='focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300'
+						className='focus:ring-brand focus:border-brand block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300'
 						placeholder='Type here for search'
 						onChange={handleChange}
 					/>
