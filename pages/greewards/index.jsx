@@ -1,5 +1,5 @@
 import Search from '../../components/Search';
-import ProductList from '../../components/ProductList';
+import ProductList from '../../components/ProductListGreewards';
 
 const Home = ({}) => {
 	return (

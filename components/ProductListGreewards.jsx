@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "Free Coffee",
     href: "#",
-    price: "10",
+    price: "10 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1598908314732-07113901949e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     imageAlt:
@@ -13,7 +13,7 @@ const products = [
     id: 2,
     name: "Free Lunch",
     href: "#",
-    price: "50",
+    price: "50 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1555243896-c709bfa0b564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     imageAlt:
@@ -23,7 +23,7 @@ const products = [
     id: 3,
     name: "Free Merch",
     href: "#",
-    price: "200",
+    price: "200 🥕",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
     imageAlt:
@@ -33,7 +33,7 @@ const products = [
     id: 4,
     name: "Day-off",
     href: "#",
-    price: "5000",
+    price: "5000 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
     imageAlt:
@@ -44,7 +44,7 @@ const products = [
 export default function ProductList() {
   return (
     <div className="px-4 py-7 sm:px-6 lg:px-8">
-      <h1 className="text-xl font-semibold text-gray-900">Highlights</h1>
+      <h1 className="text-xl font-semibold text-gray-900">Greewards</h1>
       <div className="bg-white">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
