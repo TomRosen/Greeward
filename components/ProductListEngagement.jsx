@@ -22,7 +22,7 @@ const products = [
   {
     id: 3,
     name: "Reuse Office Equipment",
-    href: "#",
+    href: "engagements/reuse-office-equipment",
     price: "Get up to 200 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1444201716572-c60ec66d0494?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
