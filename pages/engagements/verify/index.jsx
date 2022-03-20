@@ -1,4 +1,7 @@
+import Modal from '@/components/Modal';
+import { useState } from 'react';
 const Home = ({}) => {
+	const [verified, setVerified] = useState(false);
 	const submitForm = async (event) => {
 		event.preventDefault();
 		await fetch('/api/user/addCarrots', {
@@ -12,6 +15,7 @@ const Home = ({}) => {
 		}).catch((error) => {
 			console.log(error);
 		});
+		setVerified(true);
 	};
 	return (
 		<div>
@@ -22,7 +26,13 @@ const Home = ({}) => {
 					<div class='border-t border-gray-200'></div>
 				</div>
 			</div>
-
+			{verified ? (
+				<Modal
+					title={'Amazing!'}
+					desc={'You helped to save 84% CO₂ emissions'}></Modal>
+			) : (
+				<></>
+			)}
 			<div class='mt-10 sm:mt-0'>
 				<center>
 					<div class='md:grid md:grid-cols-3 md:gap-6'>
