@@ -19,11 +19,6 @@ export default function Navbar() {
   };
   const navigation = [
     {
-      name: "Dashboard",
-      href: "/",
-      current: getCurrent("/"),
-    },
-    {
       name: "Engagements",
       href: "/engagements",
       current: getCurrent("/engagements"),
@@ -35,10 +30,10 @@ export default function Navbar() {
     },
   ];
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="border-b-4 border-brand-900 bg-black">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -77,9 +72,9 @@ export default function Navbar() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "px-3 py-2 rounded-md text-sm font-medium"
+                              ? "border-white text-white"
+                              : "border-transparent text-gray-300 hover:border-gray-200 hover:text-white",
+                            "px-3 py-5 my-5 border-b-2 text-sm font-medium transition duartion-500 ease-in-out"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -139,16 +134,34 @@ export default function Navbar() {
                     </div>
                   </>
                 ) : (
-                  <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-4">
-                      <a
-                        className="bg-gray-900 text-white"
-                        onClick={() => signIn()}
-                      >
-                        Sign in
-                      </a>
-                    </div>
-                  </div>
+                    <>
+                      <div className="hidden sm:block sm:ml-6">
+                        <div className="flex space-x-4">
+                          <a
+                            className="text-white"
+                            onClick={() => signIn()}
+                          >
+                            Sign in
+                          </a>
+                        </div>
+                      </div>
+                      <div className="hidden sm:block sm:ml-6">
+                        <div className="flex space-x-4">
+                          <Link href='/auth/signup'>
+                            <a
+                                className={classNames(
+                                    getCurrent('/auth/signup')
+                                        ? "border-white text-white"
+                                        : "border-transparent text-gray-300 hover:border-gray-200 hover:text-white",
+                                    "px-3 py-5 my-5 border-b-2 text-sm font-medium transition duartion-500 ease-in-out"
+                                )}
+                            >
+                              Sign Up
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </>
                 )}
               </div>
             </div>

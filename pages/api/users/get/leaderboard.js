@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 		limit = limit ? limit : 100;
 		skip = skip ? skip : 0;
 		let results = await User.find({}, null, {
-			sort: { date: 1 },
+			sort: { date: -1 },
 			limit: limit,
 			skip: skip,
 		}).catch((err) => {
@@ -22,9 +22,4 @@ export default async function handler(req, res) {
 		console.log('Invalid request type!❌');
 		res.status(400).send('Invalid request type!❌');
 	}
-}
-
-function convertToArray(a) {
-	a.constructor.name !== 'Array' ? (a = [a]) : (a = a);
-	return a;
 }

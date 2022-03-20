@@ -119,4 +119,3 @@ const people = [
       </div>
     );
   }
-  

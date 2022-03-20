@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Travel Green",
-    href: "#",
+    href: "engagements/verify",
     price: "Get up to 1000 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -11,8 +11,8 @@ const products = [
   },
   {
     id: 2,
-    name: "Vegan Mensa",
-    href: "#",
+    name: "Conscious Mensa Meals",
+    href: "engagements/verify",
     price: "Get up to 20 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1560341208-305f47d5e901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -21,8 +21,8 @@ const products = [
   },
   {
     id: 3,
-    name: "Reuse Office Equipment",
-    href: "#",
+    name: "Buy refurbished Equipment",
+    href: "engagements/verify",
     price: "Get up to 200 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1444201716572-c60ec66d0494?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -31,8 +31,8 @@ const products = [
   },
   {
     id: 4,
-    name: "Reuse Non-Office Products",
-    href: "#",
+    name: "Repair, reduce and recycle",
+    href: "engagements/verify",
     price: "Get up to 100 🥕",
     imageSrc:
       "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -46,7 +46,7 @@ export default function ProductList() {
     <div className="px-4 py-7 sm:px-6 lg:px-8">
       <h1 className="text-xl font-semibold text-gray-900">Engagements</h1>
       <div className="bg-white">
-        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="py-16">
           <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
               <a key={product.id} href={product.href} className="group">
