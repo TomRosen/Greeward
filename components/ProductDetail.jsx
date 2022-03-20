@@ -1,6 +1,9 @@
+import { redeem } from "@/helper/data/greewards";
+import { useSession } from "next-auth/react";
+
 const ProductDetail = (data) => {
+  const { data: session, status } = useSession();
   const product = data.product[0];
-  console.log(product);
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -20,7 +23,10 @@ const ProductDetail = (data) => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 {product.carrots}
               </span>
-              <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+              <button
+                className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                onClick={() => redeem(product._id, session.user.email)}
+              >
                 Redeem
               </button>
             </div>
