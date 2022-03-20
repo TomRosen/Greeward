@@ -53,7 +53,7 @@ class SignUpForm extends React.Component {
 				<a className='text-danger'>{this.state.message}</a>
 				<form onSubmit={this.handleSubmit}>
 					<div className='form-group'>
-						<label htmlFor='firstname'>Name</label>
+						<label htmlFor='firstname'>Firstname</label>
 						<input
 							type='text'
 							id='firstname'
@@ -63,7 +63,7 @@ class SignUpForm extends React.Component {
 							onChange={this.handleChange}></input>
 					</div>
 					<div className='form-group'>
-						<label htmlFor='lastname'>Name</label>
+						<label htmlFor='lastname'>Firstname</label>
 						<input
 							type='text'
 							id='lastname'
