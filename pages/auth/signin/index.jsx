@@ -10,10 +10,6 @@ export default function SignIn({ csrfToken }) {
 
 	function signinFormCallback() {}
 
-	function autoRedirect() {
-		setTimeout(() => router.push('/dashboard'), 5000);
-	}
-
 	if (status === 'loading') {
 		return <div className='loader container'></div>;
 	}
@@ -24,13 +20,11 @@ export default function SignIn({ csrfToken }) {
 					<div className='text text-center mt-4 container'>
 						<h1>You are already logged in!</h1>
 						<p>
-							You will be automatically redirected in 5 seconds or
-							<Link href='/dashboard' passHref>
+							<Link href='/' passHref>
 								Click here
 							</Link>
 							!
 						</p>
-						{autoRedirect()}
 					</div>
 				</div>
 			) : (

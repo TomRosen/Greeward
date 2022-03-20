@@ -39,11 +39,7 @@ export default function SignUp() {
 			) : (
 				<div className='container'>
 					<SignUpForm callback={() => signupFormCallback()} />
-					<a
-						href='/api/auth/signin'
-						className='alert-link btn btn-primary btn-sm'>
-						Login
-					</a>
+
 				</div>
 			)}
 
