@@ -14,13 +14,17 @@ const getGreewardsAll = async (limit = 100, skip = 0) => {
 };
 
 const getGreewardsQuery = async (filter = {}) => {
-	const data = await fetch('/api/greewards/get/query', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({ filter }),
-	}).then((res) => res.json());
+	console.log('getGreewardsQuery', filter);
+	const data = await (
+		await fetch('/api/greewards/get/query', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ filter }),
+		})
+	).json();
+	console.log('getGreewardsQuery', data);
 	return data;
 };
 

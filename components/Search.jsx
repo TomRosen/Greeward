@@ -1,6 +1,15 @@
 import { SearchIcon, GlobeAltIcon } from '@heroicons/react/solid';
 
-export default function Example() {
+export default function Example(props) {
+	let timeout;
+	const handleChange = (e) => {
+		if (timeout) {
+			clearTimeout(timeout);
+		}
+		timeout = setTimeout(() => {
+			props.callback(e.target.value);
+		}, 500);
+	};
 	return (
 		<div className='flex justify-center mt-6'>
 			<div className='mt-1 flex rounded-md shadow-sm w-6/12 justify-center'>
@@ -17,6 +26,7 @@ export default function Example() {
 						id='search'
 						className='focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300'
 						placeholder='Type here for search'
+						onChange={handleChange}
 					/>
 				</div>
 				<button

@@ -7,12 +7,10 @@ const UserSchema = new mongoose.Schema(
 		firstname: {
 			type: String,
 			required: [true, 'firstname is required'],
-			unique: [true, 'firstname has to be unique'],
 		},
 		lastname: {
 			type: String,
 			required: [true, 'lastname is required'],
-			unique: [true, 'lastname has to be unique'],
 		},
 		email: {
 			type: String,
