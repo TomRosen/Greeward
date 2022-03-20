@@ -1,14 +1,19 @@
-import Engagement from '@/models/Engagement';
+import { getSession } from 'next-auth/react';
+import User from '@/models/User';
 import { dbConnect } from '@/helper/database/dbConnect';
 
 export default async function handler(req, res) {
 	if (req.method === 'POST') {
 		await dbConnect();
+		const session = await getSession({ req });
 
-		let { filter } = req.body;
-		console.log('filter', filter);
-		filter = filter ? filter : {};
-		let results = await Engagement.find(filter).catch((err) => {
+		let { carrots } = req.body;
+		carrots = carrots ? carrots : 0;
+		let newCarrots = session.user.carrots + carrots;
+		let results = await User.findOneAndUpdate(
+			{ email: session.user.email },
+			{ carrots: newCarrots }
+		).catch((err) => {
 			console.log('Unexpected Database error!', err);
 			res.status(500).send('Unexpected Database error!');
 		});
