@@ -1,5 +1,5 @@
 const Home = ({}) => {
-	submitForm = (event) => {
+	const submitForm = async (event) => {
 		event.preventDefault();
 		await fetch('/api/user/addCarrots', {
 			method: 'POST',
