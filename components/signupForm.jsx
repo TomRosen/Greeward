@@ -51,26 +51,30 @@ class SignUpForm extends React.Component {
 		return (
 			<div>
 				<a className='text-danger'>{this.state.message}</a>
-				<form onSubmit={this.handleSubmit}>
-					<div className='form-group'>
-						<label htmlFor='firstname'>Firstname</label>
-						<input
-							type='text'
-							id='firstname'
-							name='firstname'
-							required
-							className='form-control'
-							onChange={this.handleChange}></input>
+				<form onSubmit={this.handleSubmit} className='my-10 max-w-lg mx-auto px-4'>
+					<div className='pb-5'>
+						<label htmlFor="firstname" className="block text-sm font-medium text-gray-700">First Name</label>
+						<div className="mt-1">
+							<input type="text"
+								   onChange={this.handleChange}
+								   required
+								   id='firstname'
+								   name='firstname'
+								   className="shadow-sm focus:ring-brand focus:border-brand block w-full sm:text-sm border-gray-300 rounded-md"
+								   placeholder="Max"></input>
+						</div>
 					</div>
-					<div className='form-group'>
-						<label htmlFor='lastname'>Firstname</label>
-						<input
-							type='text'
-							id='lastname'
-							name='lastname'
-							required
-							className='form-control'
-							onChange={this.handleChange}></input>
+					<div className='pb-5'>
+						<label htmlFor="firstname" className="block text-sm font-medium text-gray-700">Last Name</label>
+						<div className="mt-1">
+							<input type="email"
+								   onChange={this.handleChange}
+								   required
+								   name='lastname'
+								   id='lastname'
+								   className="shadow-sm focus:ring-brand focus:border-brand block w-full sm:text-sm border-gray-300 rounded-md"
+								   placeholder="Müsli"></input>
+						</div>
 					</div>
 					<div className='form-group'>
 						<label htmlFor='email'>Email</label>
