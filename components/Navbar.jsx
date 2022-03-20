@@ -90,7 +90,7 @@ export default function Navbar() {
                   <>
                     {/* Points */}
                     <div>
-                      <p className="text-white">1000</p>
+                      <p className="text-white">{session.user.carrots}</p>
                     </div>
                     <div>
                       {/* Profile dropdown */}
@@ -134,34 +134,31 @@ export default function Navbar() {
                     </div>
                   </>
                 ) : (
-                    <>
-                      <div className="hidden sm:block sm:ml-6">
-                        <div className="flex space-x-4">
+                  <>
+                    <div className="hidden sm:block sm:ml-6">
+                      <div className="flex space-x-4">
+                        <a className="text-white" onClick={() => signIn()}>
+                          Sign in
+                        </a>
+                      </div>
+                    </div>
+                    <div className="hidden sm:block sm:ml-6">
+                      <div className="flex space-x-4">
+                        <Link href="/auth/signup">
                           <a
-                            className="text-white"
-                            onClick={() => signIn()}
+                            className={classNames(
+                              getCurrent("/auth/signup")
+                                ? "border-white text-white"
+                                : "border-transparent text-gray-300 hover:border-gray-200 hover:text-white",
+                              "px-3 py-5 my-5 border-b-2 text-sm font-medium transition duartion-500 ease-in-out"
+                            )}
                           >
-                            Sign in
+                            Sign Up
                           </a>
-                        </div>
+                        </Link>
                       </div>
-                      <div className="hidden sm:block sm:ml-6">
-                        <div className="flex space-x-4">
-                          <Link href='/auth/signup'>
-                            <a
-                                className={classNames(
-                                    getCurrent('/auth/signup')
-                                        ? "border-white text-white"
-                                        : "border-transparent text-gray-300 hover:border-gray-200 hover:text-white",
-                                    "px-3 py-5 my-5 border-b-2 text-sm font-medium transition duartion-500 ease-in-out"
-                                )}
-                            >
-                              Sign Up
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </>
+                    </div>
+                  </>
                 )}
               </div>
             </div>
