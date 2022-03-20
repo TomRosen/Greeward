@@ -90,7 +90,7 @@ export default function Leaderboard(props) {
 													</div>
 													<div className='ml-4'>
 														<div className='font-medium text-gray-900'>
-															{person.firstame} {person.lastname}
+															{person.firstname} {person.lastname}
 														</div>
 														<div className='text-gray-500'>{person.email}</div>
 													</div>
